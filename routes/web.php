@@ -34,3 +34,14 @@ Route::post('/subcat', function (Request $request) {
     ]);
    
 })->name('subcat');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dropdown/index', 'DropDownController@getIndex')->name('dropdown');
+
+Route::get('/indonesia','CountryController@provinces');
+Route::get('/json-regencies','CountryController@regencies');
+Route::get('/json-districts', 'CountryController@districts');
+Route::get('/json-village', 'CountryController@villages');
+
